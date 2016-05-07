@@ -1,6 +1,8 @@
 
 # FAO DATA
 
+FAO.ipynb contains simple python code to read the data from the food security database and from the livestock database, and an example of plotting the yearly meat production in Yemen.
+
 ## FOOD SECURITY DATABASE
 
 Download CSV from http://faostat3.fao.org/download/D/FS/E
@@ -113,6 +115,7 @@ The most important columns in the CSV are:
 
 
 **Element Name** (string), type of measurement, as
+
  'Laying',
  'Milk Animals',
  'Prod Popultn',
