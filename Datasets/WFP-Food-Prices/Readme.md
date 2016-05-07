@@ -5,6 +5,7 @@ https://github.com/datamission/WFP/wiki/Datasets-wiki-page#food-prices
 
 
 Columns description:
+
 |Column name | Column description | Column type|
 |--------|-------|------|
 |adm0_id | ID of country | numeric|
