@@ -14,8 +14,8 @@ table(TheFoodPrices$adm0_name)
 
 #convert mp_year and mp_month to a date
 #create first a date as a character in YYYY-MM-DD format
-TheFoodPrices$TheDateAsCharacter <- with(TheFoodPrices, paste0("01-",formatC(mp_month,format = "d",width =2, flag = "0"),"-",as.character(mp_year)))
-TheFoodPrices$TheDate <- with(TheFoodPrices,TheFoodPrices$TheDateAsCharacter)
+TheFoodPrices$TheDateAsCharacter <- with(TheFoodPrices, paste0(as.character(mp_year),"-",formatC(mp_month,format = "d",width =2, flag = "0"),"-01"))
+TheFoodPrices$TheDate <- with(TheFoodPrices,as.Date(TheDateAsCharacter))
 
 #load dplyr package
 library(dplyr)
