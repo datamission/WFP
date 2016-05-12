@@ -10,5 +10,5 @@ The CHIRPS data is built around satellite imagery. This means that a lot of the 
 ## Code
 The R script ***parse_chirps.R*** reads in a NetCDF file and transforms it into a table format. The resulting data includes precipitation value per longitude, latitude and time value. The script was based on data taken from the global_daily subfolder of the ftp (ftp://chg-ftpout.geog.ucsb.edu/pub/org/chg/products/CHIRPS-2.0/global_daily/netcdf/p25/). After parsing the data will look like what is in example_parsed.csv. Note that time is the number of days since 1980-01-01 and value is percipitation in mm/day.
 
-To download all the files from a subfolder you can use the ***download_subfolder.R*** script.
-
+To download all the files from a subfolder you can use the ***get_chirps.py*** script (simply execute "python get_chirps.py",
+you might need to install the beautifulsoup4 package with pip / conda / or any package manager you use)
