@@ -1,3 +1,10 @@
+#Location of file should be in 
+#YemenRawmVAMFileLocation
+#e.g. 
+#YemenRawmVAMFileLocation <- "C:\\RandomDirectory\\WFP data\\YEM_WFP_mVAM_RawData.csv"
+#File is on USB stick in USB\Yemen\mVAM\Data\
+stopifnot("YemenRawmVAMFileLocation" %in% ls())
+
 TheData <- read.csv(file = YemenRawmVAMFileLocation, stringsAsFactors = FALSE)
 table(TheData$num_phones)
 table(TheData$num_phones,useNA = "always")
@@ -34,7 +41,7 @@ TheData[sample(1:20000,20),c("ObsDateAsDate","ObsDate")]
 #Note that households can be rather big in the Middle east, so num_phones is indeed number of phones (and can be big)
 summary(TheData$num_phones)
 
-#split the respondents in group (for testing & training)
+#First, just look at 25% of all respondents split (for testing & training)
 AllTheRespondents <- unique(TheData$RspID)
 set.seed(20160514)
 JustFewRespondents <- sample(AllTheRespondents,round(length(AllTheRespondents)*0.25),replace=FALSE)
@@ -42,10 +49,4 @@ JustFewRespondents <- sample(AllTheRespondents,round(length(AllTheRespondents)*0
 SubsetTheData <- subset(TheData,RspID %in% JustFewRespondents)
 dim(TheData)
 dim(SubsetTheData)
-
-
- table(table(SubsetTheData$RspID))
- 
- #Want info per respondent
- #e.g. Number of times in dataset
- #Month of first contact
+table(table(SubsetTheData$RspID))
