@@ -12,9 +12,11 @@ The R script ***parse_chirps.R*** reads in a NetCDF file and transforms it into 
 
 Once you have the data parsed you can make cool plots like this:
 
-![Trace plot](/trace.gif)
+![Trace plot](/Datasets/CHIRPS/trace.gif)
 
 <img src="trace.gif", width="500">
+
+Thanks to github.com/adfi/ who made this!
 
 To download all the files from a subfolder you can use the ***get_chirps.py*** script 
 (simply execute "python get_chirps.py")
